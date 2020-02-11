@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class ClientsSeeder extends Seeder
 {
@@ -11,32 +12,13 @@ class ClientsSeeder extends Seeder
      */
     public function run()
     {
-        //
-    }
-}
-
-
-
-
-/* <?php
-
-use Illuminate\Database\Seeder;
-
-class ClientSeeder extends Seeder
-{
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     *
-    public function run()
-    {
         $array = [
             [
                 "nom" => "RAZOR",
                 "prenom" => "Blade",
                 "tel" => "0692158546",
-                "mail" => "razor.blade@gmail.com",
+                "email" => "razor.blade@gmail.com",
+                
             ]
         ];
 
@@ -45,4 +27,4 @@ class ClientSeeder extends Seeder
         );
     }
 }
- */
+ 
