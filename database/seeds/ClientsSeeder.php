@@ -19,6 +19,22 @@ class ClientsSeeder extends Seeder
                 "tel" => "0692158546",
                 "email" => "razor.blade@gmail.com",
                 
+            ],
+
+            [
+                "nom" => "O'NEll",
+                "prenom" => "Keyron",
+                "tel" => "0692158546",
+                "email" => "o'nell.keyron@gmail.com",
+                
+            ],
+
+            [
+                "nom" => "ULYSS",
+                "prenom" => "Jean",
+                "tel" => "0692158546",
+                "email" => "ulyss.jean@gmail.com",
+                
             ]
         ];
 

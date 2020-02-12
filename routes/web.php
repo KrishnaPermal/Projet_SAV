@@ -11,6 +11,33 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// /**
+//  * Acceuil
+//  */
+// Route::prefix('clients')->group(function () {
+//     Route::get('/', function(){
+//         return view('clients.clients');
+//     });
+// });
+
+      
+/**
+* Clients
+*/
+
+    Route::get('/clients', function(){
+        $clients = App\Clients::all();
+       
+            return view('clients', [
+            'clients' => $clients,
+        ]);
+    });
+
+
+    
+// /**
+//  * Clients
+//  */
+// Route::get('/clients', 'ClientsController@index');
+        
+  
