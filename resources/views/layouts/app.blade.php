@@ -12,7 +12,7 @@
 
 <body>
 
-    
+
 
     <main {{isset($id)? "id=".$id : ''}}>
         <!-- CONTENT -->

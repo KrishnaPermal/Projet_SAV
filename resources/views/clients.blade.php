@@ -17,23 +17,49 @@
 
 
 <body>
-   <div class="content">
       <h1 class="text-center">LISTES DES CLIENTS</h1>
+      <div class="content">
+         <div class="class row justify-content-center">
+            <div class="col-md-8">
+               <div class="class card">
+                  <div class="card-body">
    
-      <ul>
+                     <ul>
+   
+                        @foreach ($clients as $client)
+               
+                        <li>{{ $client->id }} Nom : {{ $client->nom }} Prenom : {{ $client->prenom }}</li>
+      
+                        
+                        @endforeach
+               
+                     </ul>
+                     
+                  </div>
+               </div>
+            </div>
+         </div>
 
-         @foreach ($clients as $client)
-
-         <li>{{ $client->nom }} {{ $client->prenom }}</li>
-        
-         @endforeach
-
-      </ul>
-   </div> 
-
-
-
-
+         <table class="table is-hoverable">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nom</th>
+                    <th>Prenom</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($clients as $client)
+                    <tr>
+                        <td>{{ $client->id }}</td>
+                        <td><strong>{{ $client->nom }}</strong></td>
+                        <td><strong>{{ $client->prenom }}</strong></td>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
 
 
 
