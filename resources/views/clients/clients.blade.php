@@ -17,23 +17,6 @@
 </html>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 {{-- @extends('layouts.app')
 @section('content')
     
@@ -41,13 +24,7 @@
 <h1 class="text-center mt-4">Listes de clients</h1>
 
 <section class="container p-4 rounded-lg">
-
-  
-    {{ $clients }}   
-
-
+    {{ $clients ?? '' }}   
 
 </section> 
-
-
 @endsection --}}

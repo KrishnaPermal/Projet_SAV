@@ -17,6 +17,6 @@ use Illuminate\Http\Request;
 /**
  * API Clients
  */
-Route::prefix('clients')->group(function () {
+/* Route::prefix('clients')->group(function () {
     Route::get('/', 'ClientsController@index');
-    });
+    }); */

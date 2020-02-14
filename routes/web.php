@@ -25,19 +25,33 @@
 * Clients
 */
 
-    Route::get('/clients', function(){
-        $clients = App\Clients::all();
+    // Route::get('/clients', function(){
+    //     $clients = App\Clients::all();
        
-            return view('clients', [
-            'clients' => $clients,
-        ]);
-    });
-
-
+    //         return view('clients', [
+    //         'clients' => $clients,
+    //     ]);
+    // });
     
+
 // /**
 //  * Clients
 //  */
 // Route::get('/clients', 'ClientsController@index');
-        
-  
+
+
+
+
+Route::get('/welcome', function () {
+    return view ('welcome');
+});
+
+
+Route::get('/clients', function () {
+    $clients = App\ClientsModel::all();
+    
+    return view('clients', [
+
+      'clients' => $clients,
+    ]); 
+});
