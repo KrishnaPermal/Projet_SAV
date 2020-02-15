@@ -55,3 +55,10 @@ Route::get('/clients', function () {
       'clients' => $clients,
     ]); 
 });
+
+
+
+
+Route::get('/information', function () {
+    return view ('information');
+});

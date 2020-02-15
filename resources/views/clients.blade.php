@@ -17,7 +17,8 @@
 
 <br>
 <body>
-      <h1>Entreprise PAUL BOYER</h1>
+   <strong><h1>ENTREPRISE PAUL BOYER</h1></strong>
+      
       <h2 class="text-center">LISTES DES CLIENTS</h2>
       <div class="content">
          <div class="class row justify-content-center">
@@ -33,14 +34,15 @@
                            <div class="card-body m-1">
                               <div class="col-md-8">
                                  ID : {{ $client->id }} <br> Nom : {{ $client->nom }} <br> Prenom : {{ $client->prenom }}
+                              <a href="/clients/{{ $client->id }}">Voir plus d'informations -> </a>
                               </div>
                            </div>
                          </div>
                
-                        @endforeach
-               
-                     </ul>
+                        @endforeach               
                      
+                     </ul>
+
                   </div>
                </div>
             </div>

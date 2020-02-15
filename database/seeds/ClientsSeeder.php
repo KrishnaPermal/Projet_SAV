@@ -14,26 +14,26 @@ class ClientsSeeder extends Seeder
     {
         $array = [
             [
-                "nom" => "RAZOR",
-                "prenom" => "Blade",
+                "nom" => "WILLIAMS",
+                "prenom" => "Joe",
                 "tel" => "0692158546",
-                "email" => "razor.blade@gmail.com",
+                "email" => "williams.joe@gmail.com",
                 
             ],
 
             [
-                "nom" => "O'NEll",
-                "prenom" => "Keyron",
+                "nom" => "TAYLOR",
+                "prenom" => "Harry",
                 "tel" => "0692158546",
-                "email" => "o'nell.keyron@gmail.com",
+                "email" => "taylor.harry@gmail.com",
                 
             ],
 
             [
-                "nom" => "ULYSS",
-                "prenom" => "Jean",
+                "nom" => "MILLER",
+                "prenom" => "James",
                 "tel" => "0692158546",
-                "email" => "ulyss.jean@gmail.com",
+                "email" => "miller.james@gmail.com",
                 
             ]
         ];
