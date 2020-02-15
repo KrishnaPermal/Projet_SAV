@@ -15,9 +15,10 @@
 </head>
 
 
-
+<br>
 <body>
-      <h1 class="text-center">LISTES DES CLIENTS</h1>
+      <h1>Entreprise PAUL BOYER</h1>
+      <h2 class="text-center">LISTES DES CLIENTS</h2>
       <div class="content">
          <div class="class row justify-content-center">
             <div class="col-md-8">
@@ -27,10 +28,15 @@
                      <ul>
    
                         @foreach ($clients as $client)
+
+                        <div class="card m-4">
+                           <div class="card-body m-1">
+                              <div class="col-md-8">
+                                 ID : {{ $client->id }} <br> Nom : {{ $client->nom }} <br> Prenom : {{ $client->prenom }}
+                              </div>
+                           </div>
+                         </div>
                
-                        <li>{{ $client->id }} Nom : {{ $client->nom }} Prenom : {{ $client->prenom }}</li>
-      
-                        
                         @endforeach
                
                      </ul>
@@ -39,37 +45,6 @@
                </div>
             </div>
          </div>
-
-         <table class="table is-hoverable">
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Nom</th>
-                    <th>Prenom</th>
-                    <th></th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach($clients as $client)
-                    <tr>
-                        <td>{{ $client->id }}</td>
-                        <td><strong>{{ $client->nom }}</strong></td>
-                        <td><strong>{{ $client->prenom }}</strong></td>
-                    </tr>
-                @endforeach
-            </tbody>
-        </table>
-
-
-
-
-
-
-
-
-
-
 
    <!-- SCRIPT -->
    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
