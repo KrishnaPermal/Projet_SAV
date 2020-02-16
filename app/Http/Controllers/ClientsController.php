@@ -23,7 +23,14 @@ class clientsController extends Controller
         ]); 
     }
 
-    
+    public function show($id)
+    {
+        $clients = Clients::find(1)
+            ->where('id', '=', $id)
+            ->first();
+        
+        return view('fiche')->with('clients',$client);
+    }
 }
 
 

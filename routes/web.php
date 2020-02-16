@@ -57,8 +57,4 @@ Route::get('/clients', function () {
 });
 
 
-
-
-Route::get('/information', function () {
-    return view ('information');
-});
+Route::get('/clients/{{id}}', 'ClientsController@show');
