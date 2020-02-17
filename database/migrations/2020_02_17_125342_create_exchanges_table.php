@@ -15,8 +15,8 @@ class CreateExchangesTable extends Migration
     {
         Schema::create('exchanges', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('type', 50);
-            $table->string('commentaire', 50);
+            $table->string('type', 255);
+            $table->string('commentaire', 255);
 
 
          
@@ -53,8 +53,7 @@ class CreateExchangesTable extends Migration
         //supprime 
         $table->dropIfExists('id_users');
         $table->dropIfExists('id_clients');
-
-
+      
       
 
        Schema::enableForeignKeyConstraints();
