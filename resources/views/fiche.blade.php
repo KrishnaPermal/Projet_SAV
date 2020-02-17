@@ -1,1 +1,2 @@
-fiche 
+{{$client->email}}
+{{$client->tel}}

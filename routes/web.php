@@ -57,4 +57,11 @@ Route::get('/clients', function () {
 });
 
 
-Route::get('/clients/{{id}}', 'ClientsController@show');
+Route::get('/clients/{id}', 'ClientsController@show');
+
+
+
+
+// Route::get('/fiche', function() {
+//     return view('fiche');
+// });

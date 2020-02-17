@@ -33,8 +33,8 @@
                         <div class="card m-4">
                            <div class="card-body m-1">
                               <div class="col-md-8">
-                                 ID : {{ $client->id }} <br> Nom : {{ $client->nom }} <br> Prenom : {{ $client->prenom }}
-                              <a href="/clients/{{ $client->id }}"><button class="btn btn-warning">Voir plus d'informations</button></a>
+                                 ID : {{ $client->id }} <br> Nom : {{ $client->nom }} <br> Prenom : {{ $client->prenom }} <br>
+                                 <a href="/clients/{{ $client->id }}"><button class="btn btn-primary">Voir plus d'informations</button></a>
                               </div>
                            </div>
                          </div>
