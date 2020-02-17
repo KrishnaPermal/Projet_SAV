@@ -46,6 +46,7 @@ class CreateExchangesTable extends Migration
     public function down()
     {
 
+
        
     Schema::table('exchanges', function (Blueprint $table) {
      

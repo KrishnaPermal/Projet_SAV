@@ -4,10 +4,10 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class ClientsModel extends Model
+class ExchangesTypesModel extends Model
 {
-    protected $table = 'clients'; /*Définit le nom de la table*/
-    protected $fillable = ['nom', 'prenom'];
+    protected $table = 'exchanges_types'; /*Définit le nom de la table*/
+    protected $fillable = [ 'type'];
     public $timestamps= false;
 
     public function exchanges()

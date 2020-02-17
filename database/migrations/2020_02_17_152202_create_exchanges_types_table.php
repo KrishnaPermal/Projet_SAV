@@ -21,9 +21,9 @@ class CreateExchangesTypesTable extends Migration
         });
 
 //on oublie pas de rajouter la cle etranger pour id_exchange_type
-        // Schema::table('exchanges', function($table) { 
-        //     $table->foreign('id_exchange_types')->references('id')->on('exchanges_types');
-        // });
+        Schema::table('exchanges', function($table) { 
+            $table->foreign('id_exchange_types')->references('id')->on('exchanges_types');
+        });
     }
 
     /**
