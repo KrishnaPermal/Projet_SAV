@@ -62,6 +62,3 @@ Route::get('/clients/{id}', 'ClientsController@show');
 
 
 
-// Route::get('/fiche', function() {
-//     return view('fiche');
-// });

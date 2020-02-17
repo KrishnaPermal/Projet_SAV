@@ -23,6 +23,8 @@ class clientsController extends Controller
         ]); 
     }
 
+
+    
     public function show($id)
     {
         $clients = ClientsModel::find(1)
