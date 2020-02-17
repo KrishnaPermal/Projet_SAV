@@ -28,16 +28,19 @@
                   <div class="card-body">
    
                      <ul>
-
                         <div class="card m-4">
-                           <div class="card-body m-1">
-                              <div class="col-md-8">
-                                Email du client : {{$client->email}} <br>
-                                Téléphone du client : {{$client->tel}}
-                              </div>
-                           </div>
-                         </div>
-               
+                            <div class="card-body m-1">
+                               <div class="col-md-8">
+                                  <div class="card border-info mb-3" style="max-width: 18rem;">
+                                     <div class="card-header">INFORMATION DU CLIENT</div>
+                                     <div class="card-body text-info">
+                                       Email : {{ $client->email }} <br> 
+                                       Téléphone : {{ $client->tel }} <br>   
+                                     </div>
+                                   </div> 
+                               </div>
+                            </div>
+                          </div>
                      </ul>
 
                   </div>
