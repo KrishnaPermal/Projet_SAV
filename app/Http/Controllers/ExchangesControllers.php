@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\ClientsModel;
 use App\ExchangesModel;
 use App\ExchangesTypesModel;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -28,6 +30,8 @@ class ExchangesControllers extends Controller
         ]); 
     }
 
+
+
     /**
      * Show the form for creating a new resource.
      *
@@ -35,34 +39,36 @@ class ExchangesControllers extends Controller
      */
     public function create(Request $request)
     {
-        // $operateur = User::all();
-    //    $exchange_types = ExchangesTypesModel::all();
-        //     return view('clients.exchange')->with('operateur', $operateur);
+         //$operateur = User::all();
+         $exchange_types = ExchangesTypesModel::all();
+        // return view('clients.exchange')->with('operateur', $operateur)->with('exchange_types', $exchange_types);;
 
-    //     return view('clients.exchange',
-    //     [
-    //         'exchange_types' => $exchange_types,
-    //     ]
-    // );
+            return view('clients.exchange',
+            [
+                 'exchange_types' => $exchange_types,
+            ]
+    
+            );
 
         
-    $ExchangesValidate = Validator::make(
+        $ExchangesValidate = Validator::make(
         $request->input(),
-        [
-            'type' => 'required',
-            'commentaire' => 'required',
-            'id_users' => 'required',
-            'id_clients' => 'required',
-            'id_exchange_types' => 'required',
-        ],
-        [
-            'required' => 'Le champs :attribute est requis', 
-        ]
-    )->validate();
+            [
+              'type' => 'required',
+              'commentaire' => 'required',
+              'id_users' => 'required',
+              'id_clients' => 'required',
+              'id_exchange_types' => 'required',
+            ],
+            
+            [
+              'required' => 'Le champs :attribute est requis', 
+          ]
+      )->validate();
 
-  $addExchanges = ExchangesModel::create($ExchangesValidate);
-    return $ExchangesValidate;
-        }
+        $addExchanges = ExchangesModel::create($ExchangesValidate);
+            return $ExchangesValidate;
+    }
 
 
 

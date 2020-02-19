@@ -17,7 +17,7 @@
 
 <br>
 <body>
-   <strong><h1>ENTREPRISE PAUL BOYER</h1></strong>
+   <strong><h1>PAUL BOYER & co</h1></strong>
       
       <h2 class="text-center">LISTES DES CLIENTS</h2>
       <h3 class="text-center">Plus d'informations</h3>
@@ -34,6 +34,9 @@
                                   <div class="card border-info mb-3" style="max-width: 18rem;">
                                      <div class="card-header">INFORMATION DU CLIENT</div>
                                      <div class="card-body text-info">
+                                       ID : {{ $client->id }} <br> 
+                                       Nom : {{ $client->nom }} <br> 
+                                       Prenom : {{ $client->prenom }} <br>
                                        Email : {{ $client->email }} <br> 
                                        Téléphone : {{ $client->tel }} <br>   
                                      </div>
