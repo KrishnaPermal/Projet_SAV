@@ -60,5 +60,5 @@ Route::get('/clients', function () {
 Route::get('/clients/{id}', 'ClientsController@show');
 
 
-
+Route::post('/exchange', 'ExchangesControllers@create');
 

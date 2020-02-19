@@ -9,10 +9,13 @@
       <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
    </head>
    <body>
+      
       @foreach($clients as $client)
          <h3>{{ $client->title }}</h3>
+         
          <p>{{ $client->content }}</p>
       @endforeach
+     
    </body>
 </html>
 

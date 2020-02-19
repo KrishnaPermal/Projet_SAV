@@ -12,6 +12,6 @@ class ExchangesTypesModel extends Model
 
     public function exchanges()
     {
-        return $this->hasMany('App\Exchange');
+        return $this->hasMany('App\ExchangesModel');
     }
 }

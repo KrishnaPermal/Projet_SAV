@@ -45,7 +45,7 @@
                          </div>
                
                         @endforeach               
-                     
+                     {{ csrf_token() }}
                      </ul>
 
                   </div>

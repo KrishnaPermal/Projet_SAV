@@ -7,8 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class ExchangesModel extends Model
 {
     protected $table = 'exchanges'; /*Définit le nom de la table*/
-    protected $fillable = [ 'commentaire'];
-   
+    protected $fillable = ['id_users','id_clients','id_exchange_types','type','commentaire'];
+    public $timestamps = false;
 
    
 
