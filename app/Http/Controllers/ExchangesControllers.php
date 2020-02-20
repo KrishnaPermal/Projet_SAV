@@ -39,14 +39,32 @@ class ExchangesControllers extends Controller
      */
     public function create(Request $request)
     {
-         //$operateur = User::all();
          $exchange_types = ExchangesTypesModel::all();
         // return view('clients.exchange')->with('operateur', $operateur)->with('exchange_types', $exchange_types);;
+
+
+        //recupère tous les données clients 
+
+        $clients = ClientsModel::all();
+
+        
+        //recupère tous les données users
+        
+        $operateur = User::all();
+
 
             return view('clients.exchange',
             [
                  'exchange_types' => $exchange_types,
-            ]
+            ],
+
+            [
+                'operateurs' => $operateur,
+            ],
+
+            [
+                'clients' => $clients,
+            ],
     
             );
 

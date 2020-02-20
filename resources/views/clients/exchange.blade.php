@@ -1,4 +1,3 @@
-
     @extends('layouts.app')
     @section('content')
  <br><br>
@@ -9,7 +8,6 @@
                <div class="card-body">
 
                   <ul>
-                     <div class="card m-4">
                          <div class="card-body m-1">
                             <div class="col-md-8">
                                <div class="card border-info mb-3" style="max-width: 18rem;">
@@ -33,7 +31,38 @@
                               
                                           </div>
                                         </div>
+
+                                        <div class="dropdown">
+                                          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            operateur
+                                          </button>
+                                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                              
+                                              @foreach ($operateurs as $operateur)
+                                              <a class="dropdown-item" href="#">{{$operateur->nom}}</a>
+
+                                             @endforeach
+                              
+                                          </div>
+                                        </div>
+
+                                        <div class="dropdown">
+                                          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Client
+                                          </button>
+                                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                              
+                                              @foreach ($clients as $client)
+                                              <a class="dropdown-item" href="#">{{$client->type}}</a>
+
+                                             @endforeach
+                              
+                                          </div>
+                                        </div>
                                         
+
+
+
                                       <div class="form-group">
                                           <label for="exampleFormControlTextarea1">Commentaire</label>
                                           <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
@@ -46,8 +75,7 @@
                                   </div>
                                 </div> 
                             </div>
-                         </div>
-                       </div>
+                         </div>  
                   </ul>
 
                </div>

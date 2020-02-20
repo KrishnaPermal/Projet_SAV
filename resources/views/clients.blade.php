@@ -17,9 +17,10 @@
 
 <br>
 <body>
-   <strong><h1>ENTREPRISE PAUL BOYER</h1></strong>
+   <strong><h1>PAUL BOYER & Co</h1></strong>
+   <strong><h2>S.A.V</h2></strong>
       
-      <h2 class="text-center">LISTES DES CLIENTS</h2>
+      <h3 class="text-center">LISTES DES CLIENTS</h3>
       <div class="content">
          <div class="class row justify-content-center">
             <div class="col-md-8">
