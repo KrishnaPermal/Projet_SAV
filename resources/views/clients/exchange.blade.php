@@ -34,7 +34,7 @@
 
                                         <div class="dropdown">
                                           <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            operateur
+                                            operateurs
                                           </button>
                                           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                               
@@ -44,6 +44,8 @@
                                              @endforeach
                               
                                           </div>
+
+                                          
                                         </div>
 
                                         <div class="dropdown">
@@ -53,7 +55,7 @@
                                           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                               
                                               @foreach ($clients as $client)
-                                              <a class="dropdown-item" href="#">{{$client->type}}</a>
+                                              <a class="dropdown-item" href="#">{{$client->nom}}</a>
 
                                              @endforeach
                               

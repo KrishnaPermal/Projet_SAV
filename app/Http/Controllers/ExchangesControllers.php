@@ -50,51 +50,18 @@ class ExchangesControllers extends Controller
         
         //recupère tous les données users
         
-        $operateur = User::all();
+        $operateurs= User::all();
+        $tableau = [
+        'exchange_types' =>$exchange_types,
+        'operateurs' =>$operateurs,
+        'clients'=>$clients
+        ];
+            return view('clients.exchange',$tableau);
 
 
-            return view('clients.exchange',
-            [
-                 'exchange_types' => $exchange_types,
-            ],
-
-            [
-                'operateurs' => $operateur,
-            ],
-
-            [
-                'clients' => $clients,
-            ],
-    
-            );
-
-        
-        $ExchangesValidate = Validator::make(
-        $request->input(),
-            [
-              'type' => 'required',
-              'commentaire' => 'required',
-              'id_users' => 'required',
-              'id_clients' => 'required',
-              'id_exchange_types' => 'required',
-            ],
-            
-            [
-              'required' => 'Le champs :attribute est requis', 
-          ]
-      )->validate();
-
-        $addExchanges = ExchangesModel::create($ExchangesValidate);
-            return $ExchangesValidate;
     }
 
-
-
-
-
-
-     
-        
+   
     /**
      * Store a newly created resource in storage.
      *
@@ -103,8 +70,33 @@ class ExchangesControllers extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $ExchangesValidate = Validator::make(
+        $request->input(),
+             [
+               'type' => 'required',
+               'commentaire' => 'required',
+                'id_users' => 'required',
+               'id_clients' => 'required',
+               'id_exchange_types' => 'required',
+             ],
+            
+             [
+               'required' => 'Le champs :attribute est requis', 
+           ]
+       )->validate();
+
+         $addExchanges = ExchangesModel::create($ExchangesValidate);
+             return $ExchangesValidate;
     }
+
+
+
+
+
+
+
+
+
 
     /**
      * Display the specified resource.
