@@ -13,7 +13,9 @@
 <body>
 
 
-
+    <!-- NAVBAR -->
+    @include('partials.navbar')
+    
     <main {{isset($id)? "id=".$id : ''}}>
         <!-- CONTENT -->
         @yield('content')
