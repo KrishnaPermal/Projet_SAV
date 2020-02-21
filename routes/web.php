@@ -42,11 +42,6 @@
 
 
 
-Route::get('/welcome', function () {
-    return view ('welcome');
-});
-
-
 Route::get('/clients', function () {
     $clients = App\ClientsModel::all();
     
@@ -56,6 +51,9 @@ Route::get('/clients', function () {
     ]); 
 });
 
+Route::get('/bienvenue', function(){
+    return view ('bienvenue');
+});
 
 Route::get('/clients/{id}', 'ClientsController@show');
 

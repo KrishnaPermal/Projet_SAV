@@ -20,6 +20,9 @@
         <!-- CONTENT -->
         @yield('content')
     </main>
+
+    <!--FOOTER-->
+    @include('partials.footer')
    
 
 

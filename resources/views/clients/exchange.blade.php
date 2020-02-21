@@ -16,70 +16,56 @@
                                    
                                     <form action="/exchange" method="post">
                                       {{ csrf_field() }}
-                              
+
                                       <input type="date" name="date" placeholder="Date">
-                                      <div class="dropdown">
+
+                                      <div class="dropdown"><br><br>
                                           <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             Type de Contact
                                           </button>
                                           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                              
                                               @foreach ($exchange_types as $exchange_type)
                                               <a class="dropdown-item" href="#">{{$exchange_type->type}}</a>
-
-                                             @endforeach
-                              
+                                              @endforeach
                                           </div>
-                                        </div>
+                                      </div><br>
 
-                                        <div class="dropdown">
+                                      <div class="dropdown">
                                           <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            operateurs
+                                            Operateurs
                                           </button>
                                           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                              
                                               @foreach ($operateurs as $operateur)
                                               <a class="dropdown-item" href="#">{{$operateur->nom}}</a>
-
                                              @endforeach
-                              
                                           </div>
+                                      </div><br>
 
-                                          
-                                        </div>
-
-                                        <div class="dropdown">
+                                      <div class="dropdown">
                                           <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             Client
                                           </button>
                                           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                              
                                               @foreach ($clients as $client)
                                               <a class="dropdown-item" href="#">{{$client->nom}}</a>
-
-                                             @endforeach
-                              
+                                              @endforeach
                                           </div>
-                                        </div>
-                                        
-
-
+                                      </div><br>
 
                                       <div class="form-group">
                                           <label for="exampleFormControlTextarea1">Commentaire</label>
                                           <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                                       </div>
-                                      {{-- <input type="password" name="password" placeholder="Mot de passe">
-                                      <input type="password" name="password_confirmation" placeholder="Mot de passe (confirmation)"> --}}
+                                     
                                       <input type="submit" value="Ajout d'un échange">
-                                  </form>
+                                    </form>
 
                                   </div>
                                 </div> 
                             </div>
                          </div>  
                   </ul>
-
+                  
                </div>
             </div>
          </div>
