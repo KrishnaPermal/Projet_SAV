@@ -3,9 +3,9 @@
  <br><br>
     <div class="content">
       <div class="class row justify-content-center">
-         <div class="col-md-8">
+         <div class="col-md-5">
             <div class="class card">
-               <div class="card-body">
+            
 
                   <ul>
                          <div class="card-body m-1">
@@ -66,7 +66,7 @@
                          </div>  
                   </ul>
                   
-               </div>
+              
             </div>
          </div>
       </div>

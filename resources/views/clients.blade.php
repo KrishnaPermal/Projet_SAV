@@ -18,16 +18,14 @@
 <br>
 <body>
    @extends('layouts.app')
-    @section('content')
+   @section('content')
   
       <br><br>
       <h3 class="text-center">LISTES DES CLIENTS</h3>
       <div class="content">
          <div class="class row justify-content-center">
             <div class="col-md-8">
-               <div class="class card">
-                  <div class="card-body">
-   
+
                      <ul>
    
                         @foreach ($clients as $client)
@@ -47,15 +45,12 @@
                          </div>
                
                         @endforeach 
-                        @endsection
-                                      
+   @endsection              
                      {{-- {{ csrf_token() }} --}}
                      </ul>
-
-                  </div>
-               </div>
             </div>
          </div>
+      </div>
 
    <!-- SCRIPT -->
    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

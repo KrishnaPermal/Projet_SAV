@@ -1,10 +1,9 @@
-
-<nav class="navbar fixed-top navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">PAUL BOYER</a>
-    <a class="navbar-brand" href="#">SAV</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">PAUL BOYER & Co : S.A.V</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav ml-auto ">
         <li class="nav-item active ">
@@ -18,4 +17,8 @@
         </li>
       </ul>
     </div>
-</nav><br>
+  </div>
+</nav><br><br>
+
+
+
