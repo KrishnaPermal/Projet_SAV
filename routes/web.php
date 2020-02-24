@@ -58,5 +58,5 @@ Route::get('/bienvenue', function(){
 Route::get('/clients/{id}', 'ClientsController@show');
 
 
-Route::get('/exchange', 'ExchangesControllers@create');
+Route::post('/exchange', 'ExchangesControllers@create');
 
