@@ -29,8 +29,8 @@
                      <ul>
    
                         @foreach ($clients as $client)
-
-                        <div class="card m-4">
+                        {{-- {{ csrf_token() }} --}}
+                        <div class="card m-4">        
                            <div class="card-body m-1">
                               <div class="col-md-8">
                                  <div class="card border-info mb-3" style="max-width: 18rem;">
@@ -46,7 +46,7 @@
                
                         @endforeach 
    @endsection              
-                     {{-- {{ csrf_token() }} --}}
+            
                      </ul>
             </div>
          </div>

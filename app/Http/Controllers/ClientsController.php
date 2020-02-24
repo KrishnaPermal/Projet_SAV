@@ -16,8 +16,7 @@ class clientsController extends Controller
     {
         //recupère toutes les données clients
         $clients = ClientsModel::all();
-     
-        
+         
         return view('clients.clients', [
             'clients' => $clients,
         ]); 

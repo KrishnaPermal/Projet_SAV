@@ -64,10 +64,14 @@ class ExchangesControllers extends Controller
         //AJout validator
 
         $array = Validator::make($request->all(), [
+            'type' => 'required',
             'commentaire' => 'required',
+            'id_users' => 'required',
+            'id_clients' => 'required',
+            'id_exchange_types' => 'required',
         ], ['required' => 'l\'attribut :attribute est requis'])->validate();
             
-        $insertExchange = ExchangeTypes::create(
+        $insertExchange = ExchangeTypesModel::create(
             $array
         );
             
@@ -88,23 +92,23 @@ class ExchangesControllers extends Controller
     public function store(Request $request)
     {
         
-        $ExchangesValidate = Validator::make(
-            $request->input(),
-                 [
-                   'type' => 'required',
-                   'commentaire' => 'required',
-                    'id_users' => 'required',
-                   'id_clients' => 'required',
-                   'id_exchange_types' => 'required',
-                 ],
+        // $ExchangesValidate = Validator::make(
+        //     $request->input(),
+        //          [
+        //            'type' => 'required',
+        //            'commentaire' => 'required',
+        //             'id_users' => 'required',
+        //            'id_clients' => 'required',
+        //            'id_exchange_types' => 'required',
+        //          ],
                 
-                 [
-                   'required' => 'Le champs :attribute est requis', 
-               ]
-           )->validate();
+        //          [
+        //            'required' => 'Le champs :attribute est requis', 
+        //        ]
+        //    )->validate();
     
-             $addExchanges = ExchangesModel::create($ExchangesValidate);
-                 return $ExchangesValidate;
+        //      $addExchanges = ExchangesModel::create($ExchangesValidate);
+        //          return $ExchangesValidate;
 
 
     }

@@ -17,12 +17,12 @@ class ExchangesResource extends JsonResource
      
         //Formatage des données
         
-        $types = new ExchangesTypesResource($this->whenLoaded('exchange'));
-        return [
-            'id' => $this->id,
-            'type' => $this->type,
-            'commentaire' => $this->commentaire,
-            'exchange' => $types,
-        ];
+        // $types = new ExchangesTypesResource($this->whenLoaded('exchange'));
+        // return [
+        //     'id' => $this->id,
+        //     'type' => $this->type,
+        //     'commentaire' => $this->commentaire,
+        //     'exchange' => $types,
+        // ];
     }
 }
