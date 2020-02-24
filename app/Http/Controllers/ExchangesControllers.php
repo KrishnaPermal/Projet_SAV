@@ -21,9 +21,7 @@ class ExchangesControllers extends Controller
         //
 
         $clients = ClientsModel::all();
-
-        //type
-        //user
+        
         
         return view('clients.clients', [
             'clients' => $clients,
@@ -63,19 +61,19 @@ class ExchangesControllers extends Controller
 
         //AJout validator
 
-        $array = Validator::make($request->all(), [
+        $validator = Validator::make($request->all(), [
             'type' => 'required',
             'commentaire' => 'required',
             'id_users' => 'required',
             'id_clients' => 'required',
             'id_exchange_types' => 'required',
-        ], ['required' => 'l\'attribut :attribute est requis'])->validate();
+        ])->validate();
             
-        $insertExchange = ExchangeTypesModel::create(
-            $array
-        );
+        $insertExchangeBDD = ExchangesTypesModel::create(
+            $validator
+        )->save();
             
-        return $insertExchange;
+        return json_encode($insertExchangeBDD);
 
 
 
