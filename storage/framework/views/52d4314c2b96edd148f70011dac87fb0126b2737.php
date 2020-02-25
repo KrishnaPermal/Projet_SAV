@@ -18,44 +18,40 @@
                                       <?php echo e(csrf_field()); ?>
 
 
-                                      
+                                      <input type="date" name="date" placeholder="Date">
 
-                                      <div class="dropdown"><br><br>
-                                          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Type de Contact
-                                          </button>
-                                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                              <?php $__currentLoopData = $exchange_types; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $exchange_type): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                              <a class="dropdown-item" href="#"><?php echo e($exchange_type->type); ?></a>
-                                              <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                                          </div>
+
+                                      <div class="form-group"><br>
+                                        <label for="exampleFormControlSelect1">Type de Contact</label>
+                                        <select class="form-control" id="exampleFormControlSelect1" name="type_de_contact">
+                                        <?php $__currentLoopData = $exchange_types; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $exchange_type): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                          <option href="#"><?php echo e($exchange_type->type); ?></option>
+                                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                      </select>
                                       </div><br>
 
-                                      <div class="dropdown">
-                                          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Operateurs
-                                          </button>
-                                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                              <?php $__currentLoopData = $operateurs; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $operateur): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                              <a class="dropdown-item" href="#"><?php echo e($operateur->nom); ?></a>
-                                             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                                          </div>
+                                      <div class="form-group"><br>
+                                        <label for="exampleFormControlSelect1">Operateurs</label>
+                                        <select class="form-control" id="exampleFormControlSelect1" name="operateurs">
+                                        <?php $__currentLoopData = $operateurs; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $operateur): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                          <option href="#"><?php echo e($operateur->nom); ?></option>
+                                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                      </select>
                                       </div><br>
 
-                                      <div class="dropdown">
-                                          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Client
-                                          </button>
-                                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                              <?php $__currentLoopData = $clients; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $client): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                              <a class="dropdown-item" href="#"><?php echo e($client->nom); ?></a>
-                                              <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                                          </div>
+                                      <div class="form-group"><br>
+                                        <label for="exampleFormControlSelect1">Clients</label>
+                                        <select class="form-control" id="exampleFormControlSelect1" name="clients">
+                                        <?php $__currentLoopData = $clients; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $client): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                          <option href="#"><?php echo e($client->nom); ?></option>
+                                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                      </select>
                                       </div><br>
+
 
                                       <div class="form-group">
-                                          <label for="exampleFormControlTextarea1">Commentaire</label>
-                                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                          <label for="commentaire">Commentaire</label>
+                                          <textarea class="form-control" id="commentaire" rows="3" name="commentaire"></textarea>
                                       </div>
                                      
                                       <input type="submit" value="Ajout d'un échange">

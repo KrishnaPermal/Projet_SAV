@@ -19,42 +19,38 @@
 
                                       <input type="date" name="date" placeholder="Date">
 
-                                      <div class="dropdown"><br><br>
-                                          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Type de Contact
-                                          </button>
-                                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                              @foreach ($exchange_types as $exchange_type)
-                                              <a class="dropdown-item" href="#">{{$exchange_type->type}}</a>
-                                              @endforeach
-                                          </div>
+
+                                      <div class="form-group"><br>
+                                        <label for="exampleFormControlSelect1">Type de Contact</label>
+                                        <select class="form-control" id="exampleFormControlSelect1" name="type_de_contact">
+                                        @foreach ($exchange_types as $exchange_type)
+                                          <option href="#">{{$exchange_type->type}}</option>
+                                        @endforeach
+                                      </select>
                                       </div><br>
 
-                                      <div class="dropdown">
-                                          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Operateurs
-                                          </button>
-                                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                              @foreach ($operateurs as $operateur)
-                                              <a class="dropdown-item" href="#">{{$operateur->nom}}</a>
-                                             @endforeach
-                                          </div>
+                                      <div class="form-group"><br>
+                                        <label for="exampleFormControlSelect1">Operateurs</label>
+                                        <select class="form-control" id="exampleFormControlSelect1" name="operateurs">
+                                        @foreach ($operateurs as $operateur)
+                                          <option href="#">{{$operateur->nom}}</option>
+                                        @endforeach
+                                      </select>
                                       </div><br>
 
-                                      <div class="dropdown">
-                                          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Client
-                                          </button>
-                                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                              @foreach ($clients as $client)
-                                              <a class="dropdown-item" href="#">{{$client->nom}}</a>
-                                              @endforeach
-                                          </div>
+                                      <div class="form-group"><br>
+                                        <label for="exampleFormControlSelect1">Clients</label>
+                                        <select class="form-control" id="exampleFormControlSelect1" name="clients">
+                                        @foreach ($clients as $client)
+                                          <option href="#">{{$client->nom}}</option>
+                                        @endforeach
+                                      </select>
                                       </div><br>
+
 
                                       <div class="form-group">
-                                          <label for="exampleFormControlTextarea1">Commentaire</label>
-                                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                          <label for="commentaire">Commentaire</label>
+                                          <textarea class="form-control" id="commentaire" rows="3" name="commentaire"></textarea>
                                       </div>
                                      
                                       <input type="submit" value="Ajout d'un échange">
