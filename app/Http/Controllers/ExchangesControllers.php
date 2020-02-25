@@ -28,8 +28,6 @@ class ExchangesControllers extends Controller
         ]); 
     }
 
-
-
     /**
      * Show the form for creating a new resource.
      *
@@ -38,7 +36,27 @@ class ExchangesControllers extends Controller
     public function create(Request $request)
     {
 
-            return request('clients');
+        $validateData = Validator::make(  //verifie les informations vis-a-vis de la BDD
+            $request->all(),
+            [
+                'commentaire' => 'required', //"required" -> ce champs est obligatoire
+                'date' => 'required',
+                'id_users' => 'required',
+                'id_clients' => 'required',
+                'id_exchange_types' => 'required',
+            ],
+            [
+                'required' => 'Le champs :attribute est requis', // :attribute renvoie le champs / l'id de l'element en erreure
+            ]
+        )->validate(); 
+
+        $donneeBdd = ExchangesModel::create(
+            $validateData
+        )->save();
+        
+        return "totototo";
+
+            
             
     }
 

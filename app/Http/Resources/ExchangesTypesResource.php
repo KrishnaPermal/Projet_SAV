@@ -15,9 +15,9 @@ class ExchangesTypesResource extends JsonResource
     public function toArray($request)
     {
         //Formatage des données
-        // return [
-        //     'id' => $this->id,
-        //     'type' => $this->type
-        // ];
+        return [
+            'id' => $this->id,
+            'type' => $this->type
+        ];
     }
 }

@@ -14,6 +14,7 @@ class ClientsSeeder extends Seeder
     {
         $array = [
             [
+                "id" => 1,
                 "nom" => "WILLIAMS",
                 "prenom" => "Joe",
                 "tel" => "0692158546",
@@ -22,6 +23,7 @@ class ClientsSeeder extends Seeder
             ],
 
             [
+                "id" => 2,
                 "nom" => "TAYLOR",
                 "prenom" => "Harry",
                 "tel" => "0692158546",
@@ -30,6 +32,7 @@ class ClientsSeeder extends Seeder
             ],
 
             [
+                "id" => 3,
                 "nom" => "MILLER",
                 "prenom" => "James",
                 "tel" => "0692158546",

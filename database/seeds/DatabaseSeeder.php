@@ -15,6 +15,10 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             ClientsSeeder::class,
+            ExchangesTypesSeeder::class,
+            UsersSeeder::class,
+            ExchangesSeeder::class,
+            
         ]);
     }
 } 

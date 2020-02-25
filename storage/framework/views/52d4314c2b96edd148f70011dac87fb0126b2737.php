@@ -18,32 +18,32 @@
                                       <?php echo e(csrf_field()); ?>
 
 
-                                      <input type="date" name="date" placeholder="Date">
+                                      <input type="date" name="date">
 
 
                                       <div class="form-group"><br>
                                         <label for="exampleFormControlSelect1">Type de Contact</label>
-                                        <select class="form-control" id="exampleFormControlSelect1" name="type_de_contact">
+                                        <select class="form-control" id="exampleFormControlSelect1" name="id_exchange_types">
                                         <?php $__currentLoopData = $exchange_types; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $exchange_type): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                          <option href="#"><?php echo e($exchange_type->type); ?></option>
+                                          <option href="#"><?php echo e($exchange_type->id); ?></option>
                                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                       </select>
                                       </div><br>
 
                                       <div class="form-group"><br>
                                         <label for="exampleFormControlSelect1">Operateurs</label>
-                                        <select class="form-control" id="exampleFormControlSelect1" name="operateurs">
+                                        <select class="form-control" id="exampleFormControlSelect1" name="id_users">
                                         <?php $__currentLoopData = $operateurs; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $operateur): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                          <option href="#"><?php echo e($operateur->nom); ?></option>
+                                          <option href="#"><?php echo e($operateur->id); ?></option>
                                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                       </select>
                                       </div><br>
 
                                       <div class="form-group"><br>
                                         <label for="exampleFormControlSelect1">Clients</label>
-                                        <select class="form-control" id="exampleFormControlSelect1" name="clients">
+                                        <select class="form-control" id="exampleFormControlSelect1" name="id_clients">
                                         <?php $__currentLoopData = $clients; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $client): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                          <option href="#"><?php echo e($client->nom); ?></option>
+                                          <option href="#"><?php echo e($client->id); ?></option>
                                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                       </select>
                                       </div><br>

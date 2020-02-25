@@ -17,32 +17,32 @@
                                     <form action="/exchange" method="post">
                                       {{ csrf_field() }}
 
-                                      <input type="date" name="date" placeholder="Date">
+                                      <input type="date" name="date">
 
 
                                       <div class="form-group"><br>
                                         <label for="exampleFormControlSelect1">Type de Contact</label>
-                                        <select class="form-control" id="exampleFormControlSelect1" name="type_de_contact">
+                                        <select class="form-control" id="exampleFormControlSelect1" name="id_exchange_types">
                                         @foreach ($exchange_types as $exchange_type)
-                                          <option href="#">{{$exchange_type->type}}</option>
+                                          <option href="#">{{$exchange_type->id}}</option>
                                         @endforeach
                                       </select>
                                       </div><br>
 
                                       <div class="form-group"><br>
                                         <label for="exampleFormControlSelect1">Operateurs</label>
-                                        <select class="form-control" id="exampleFormControlSelect1" name="operateurs">
+                                        <select class="form-control" id="exampleFormControlSelect1" name="id_users">
                                         @foreach ($operateurs as $operateur)
-                                          <option href="#">{{$operateur->nom}}</option>
+                                          <option href="#">{{$operateur->id}}</option>
                                         @endforeach
                                       </select>
                                       </div><br>
 
                                       <div class="form-group"><br>
                                         <label for="exampleFormControlSelect1">Clients</label>
-                                        <select class="form-control" id="exampleFormControlSelect1" name="clients">
+                                        <select class="form-control" id="exampleFormControlSelect1" name="id_clients">
                                         @foreach ($clients as $client)
-                                          <option href="#">{{$client->nom}}</option>
+                                          <option href="#">{{$client->id}}</option>
                                         @endforeach
                                       </select>
                                       </div><br>
