@@ -18,7 +18,7 @@
                                       <?php echo e(csrf_field()); ?>
 
 
-                                      <input type="date" name="date" placeholder="Date">
+                                      
 
                                       <div class="dropdown"><br><br>
                                           <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

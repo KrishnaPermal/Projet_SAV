@@ -58,5 +58,8 @@ Route::get('/bienvenue', function(){
 Route::get('/clients/{id}', 'ClientsController@show');
 
 
-Route::post('/exchange', 'ExchangesControllers@create');
 
+Route::prefix('exchange')->group(function () {
+    Route::get('/', 'ExchangesControllers@index');
+    Route::post('/', 'ExchangesControllers@create');
+});

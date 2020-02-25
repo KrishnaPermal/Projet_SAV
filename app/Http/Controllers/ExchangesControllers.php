@@ -21,10 +21,10 @@ class ExchangesControllers extends Controller
         //
 
         $clients = ClientsModel::all();
-        
-        
-        return view('clients.clients', [
-            'clients' => $clients,
+        $exchange_types = ExchangesTypesModel::all();
+        $operateurs = User::all();
+        return view('clients.exchange', [
+            'clients' => $clients, 'exchange_types' => $exchange_types, 'operateurs' => $operateurs
         ]); 
     }
 
@@ -37,47 +37,8 @@ class ExchangesControllers extends Controller
      */
     public function create(Request $request)
     {
-         $exchange_types = ExchangesTypesModel::all();
-        // return view('clients.exchange')->with('operateur', $operateur)->with('exchange_types', $exchange_types);;
 
-
-        //recupère tous les données clients 
-
-        $clients = ClientsModel::all();
-
-        
-        //recupère tous les données users
-        
-        $operateurs= User::all();
-        $tableau = [
-        'exchange_types' =>$exchange_types,
-        'operateurs' =>$operateurs,
-        'clients'=>$clients
-        ];
-        
-        //return view('clients.exchange',$tableau);
-            
-
-
-        //AJout validator
-
-        $validator = Validator::make($request->all(), [
-            'type' => 'required',
-            'commentaire' => 'required',
-            'id_users' => 'required',
-            'id_clients' => 'required',
-            'id_exchange_types' => 'required',
-        ])->validate();
-            
-        $insertExchangeBDD = ExchangesTypesModel::create(
-            $validator
-        )->save();
-            
-        return json_encode($insertExchangeBDD);
-
-
-
-
+            //
     }
 
    
@@ -89,26 +50,7 @@ class ExchangesControllers extends Controller
      */
     public function store(Request $request)
     {
-        
-        // $ExchangesValidate = Validator::make(
-        //     $request->input(),
-        //          [
-        //            'type' => 'required',
-        //            'commentaire' => 'required',
-        //             'id_users' => 'required',
-        //            'id_clients' => 'required',
-        //            'id_exchange_types' => 'required',
-        //          ],
-                
-        //          [
-        //            'required' => 'Le champs :attribute est requis', 
-        //        ]
-        //    )->validate();
-    
-        //      $addExchanges = ExchangesModel::create($ExchangesValidate);
-        //          return $ExchangesValidate;
-
-
+        //
     }
 
 

@@ -1,0 +1,34 @@
+<?php
+
+use Illuminate\Database\Seeder;
+
+class ExchangesTypesSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        $array = [
+            [
+                "id" => 1,
+                "type" => 'telephone',
+                
+            ],
+
+            [
+                "id" => 2,
+                "type" => 'email',
+                
+            ],
+
+        ];
+
+        DB::table('exchanges_types')->insert(
+            $array
+        );
+    
+    }
+}

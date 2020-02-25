@@ -17,6 +17,7 @@ class CreateExchangesTable extends Migration
             $table->bigIncrements('id');
             $table->string('type', 255);
             $table->string('commentaire', 255);
+            $table->dateTime('date');
 
 
          
