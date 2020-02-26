@@ -17,7 +17,7 @@
                                     <form action="/exchange" method="post">
                                       {{ csrf_field() }}
 
-                                      <input type="date" name="date">
+                                      <input type="date" name="date" value="yyyy-mm-dd">
 
 
                                       <div class="form-group"><br>
@@ -53,7 +53,9 @@
                                           <textarea class="form-control" id="commentaire" rows="3" name="commentaire"></textarea>
                                       </div>
                                      
-                                      <input type="submit" value="Ajout d'un échange">
+                                      
+                                      <a href="/clients/{{ $client->id}}/historic"><button class="btn btn-outline-info">Ajout</button></a> 
+                                    </div>
                                     </form>
 
                                   </div>

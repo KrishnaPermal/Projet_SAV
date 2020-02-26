@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class ExchangesSeeder extends Seeder
 {
@@ -14,7 +15,7 @@ class ExchangesSeeder extends Seeder
         $array = [
             [
                 "id" => 1,
-                "commentaire" => "blabla",
+                "commentaire" => "Lorem ipsum dolor sit amet consectetur adipisicing",
                 "date" => "2020-01-02",
                 "id_users" => 1,
                 "id_clients" => 1,

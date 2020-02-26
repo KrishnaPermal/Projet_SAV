@@ -22,9 +22,10 @@ class ExchangesControllers extends Controller
 
         $clients = ClientsModel::all();
         $exchange_types = ExchangesTypesModel::all();
+        $exchanges = ExchangesModel::all();
         $operateurs = User::all();
         return view('clients.exchange', [
-            'clients' => $clients, 'exchange_types' => $exchange_types, 'operateurs' => $operateurs
+            'clients' => $clients, 'exchange_types' => $exchange_types, 'operateurs' => $operateurs, 'exchanges' => $exchanges
         ]); 
     }
 
@@ -50,35 +51,15 @@ class ExchangesControllers extends Controller
             ]
         )->validate(); 
 
-        $donneeBdd = ExchangesModel::create(
+        $data = ExchangesModel::create(
             $validateData
         )->save();
         
-        return "totototo";
+        return 'L\'ECHANGE A BIEN ÉTÉ AJOUTER À LA BASE DE DONNÉE S.A.V';
 
             
             
     }
-
-   
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-
-
-
-
-
-
-
 
 
     /**
@@ -89,40 +70,10 @@ class ExchangesControllers extends Controller
      */
     public function show($id)
     {
-        //
+      
+        $exchanges = ExchangesModel::where('id_clients', "=", $id)->get();
+        return ($exchanges);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
+  
 }

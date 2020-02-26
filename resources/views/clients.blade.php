@@ -30,14 +30,15 @@
    
                         @foreach ($clients as $client)
                         {{-- {{ csrf_token() }} --}}
-                        <div class="card m-4">        
+                        <div class="card border-info m-3">        
                            <div class="card-body m-1">
                               <div class="col-md-8">
-                                 <div class="card border-info mb-3" style="max-width: 18rem;">
+                                 <div class="card border-info mb-3" style="max-width: 30rem;">
                                     <div class="card-header">INFORMATION DU CLIENT</div>
                                     <div class="card-body text-info">
                                        ID : {{ $client->id }} <br> Nom : {{ $client->nom }} <br> Prenom : {{ $client->prenom }} <br>
                                        <a href="/clients/{{ $client->id }}"><button class="btn btn-outline-info">Voir plus d'informations</button></a>
+                                       <a href="/clients/{{ $client->id}}/historic"><button class="btn btn-outline-info">Historique</button></a> 
                                     </div>
                                   </div> 
                               </div>

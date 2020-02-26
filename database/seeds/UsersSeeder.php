@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class UsersSeeder extends Seeder
 {
@@ -25,6 +26,26 @@ class UsersSeeder extends Seeder
             [
                 "id" => 3,
                 "nom" => "JAMS",
+            ],
+
+            [
+                "id" => 4,
+                "nom" => "TANTALIDÈS--PERMALNAÏKEN",
+            ],
+
+            [
+                "id" => 5,
+                "nom" => "PERSÉE",
+            ],
+
+            [
+                "id" => 6,
+                "nom" => "O'CONNOR",
+            ],
+
+            [
+                "id" => 7,
+                "nom" => "KANNI",
             ],
 
            

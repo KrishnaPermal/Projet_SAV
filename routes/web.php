@@ -25,7 +25,9 @@
 * Clients
 */
 
-    // Route::get('/clients', function(){
+use Illuminate\Support\Facades\Route;
+
+// Route::get('/clients', function(){
     //     $clients = App\Clients::all();
        
     //         return view('clients', [
@@ -51,15 +53,21 @@ Route::get('/clients', function () {
     ]); 
 });
 
-Route::get('/bienvenue', function(){
-    return view ('bienvenue');
+Route::get('/accueil', function(){
+    return view ('accueil');
 });
 
-Route::get('/clients/{id}', 'ClientsController@show');
+Route::prefix('clients')->group(function () {
+    Route::get('/{id}', 'ClientsController@show');
+    Route::get('/{id}/historic', 'ExchangesControllers@show');
+});
+
+
 
 
 
 Route::prefix('exchange')->group(function () {
     Route::get('/', 'ExchangesControllers@index');
     Route::post('/', 'ExchangesControllers@create');
+    Route::get('/{id}/historic', 'ExchangesControllers@show');
 });
