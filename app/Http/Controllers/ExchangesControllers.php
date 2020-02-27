@@ -19,14 +19,14 @@ class ExchangesControllers extends Controller
     public function index()
     {
         //
-
+        $ajouter = "";
         $clients = ClientsModel::all();
         $exchange_types = ExchangesTypesModel::all();
         $exchanges = ExchangesModel::all();
         $operateurs = User::all();
         return view('clients.exchange', [
-            'clients' => $clients, 'exchange_types' => $exchange_types, 'operateurs' => $operateurs, 'exchanges' => $exchanges
-        ]); 
+            'clients' => $clients, 'exchange_types' => $exchange_types, 'operateurs' => $operateurs, 'exchanges' => $exchanges, 'ajouter' => $ajouter        
+            ]); 
     }
 
     /**
@@ -37,6 +37,11 @@ class ExchangesControllers extends Controller
     public function create(Request $request)
     {
 
+        
+        $clients = ClientsModel::all();
+        $exchange_types = ExchangesTypesModel::all();
+        $exchanges = ExchangesModel::all();
+        $operateurs = User::all();
         $validateData = Validator::make(  //verifie les informations vis-a-vis de la BDD
             $request->all(),
             [
@@ -55,10 +60,18 @@ class ExchangesControllers extends Controller
             $validateData
         )->save();
         
-        return view('clients.confirmation');
-
-            
-            
+        if($validateData){
+            $ajouter = "L'Échange à bien été ajouter dans la Base de donnée";
+        }
+        else {
+            $ajouter = "";
+        }
+        
+        return view('clients.exchange', [
+            'clients' => $clients, 'exchange_types' => $exchange_types, 'operateurs' => $operateurs, 'exchanges' => $exchanges, 'ajouter' => $ajouter,  
+                    
+                    ]);
+ 
     }
 
 

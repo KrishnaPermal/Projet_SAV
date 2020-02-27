@@ -1,31 +1,30 @@
 <?php $__env->startSection('content'); ?>
-<br><br>
+<br><br><br>
 <div class="content">
-  <div class="row justify-content-center">
+  <div class="row justify-content-center mr-5"><br>
      <div class="col-md-5">
-
-        <div class="card">
-
-
-
-                     <div class="card-body m-1">
-                        <div class="col-md-8">
-                           <div class="card border-info mb-3" style="max-width: 18rem;">
+                  
+                  <h1 class="text-center">ECHANGES</h1>
+                     <div class="card-body m-2">
+                        <div class="d-flex justify-content-center">
+                           <div class="card border-info mb-5" style="max-height:30rem">
                               <div class="card-body text-info">
 
-                                <form action="/exchange" method="post">
+                              
+                              <form action="/exchange" method="post">
                                   <?php echo e(csrf_field()); ?>
 
-
-                                  <input type="date" name="date" value="yyyy-mm-dd">
-
+                                  <div class="form-group">
+                                    <label for="exampleFormControlSelect1">Date</label>
+                                  <input class="form-control" type="date" name="date" value="yyyy-mm-dd">
+                                  </div>
 
                                   <div class="form-group"><br>
                                     <label for="exampleFormControlSelect1">Type de Contact</label>
                                     <select class="form-control" id="exampleFormControlSelect1" name="id_exchange_types">
                                     <?php $__currentLoopData = $exchange_types; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $exchange_type): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                       <option href="#"><?php echo e($exchange_type->id); ?></option>
-                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                   </select>
                                   </div><br>
 
@@ -55,18 +54,17 @@
 
 
                                   <a href="/clients/<?php echo e($client->id); ?>/historic"><button class="btn btn-outline-info">Ajout</button></a>
-                                </div>
-                                </form>
-
+                                
+                              </form> 
+                              
                               </div>
+                                    <p class="text-center"><?php echo e($ajouter); ?></p>  
                             </div>
                         </div>
-          </div>
-        </div>
-
-        </div>
-     </div>
-
+                    </div>
+          
+    </div>
+  </div>
 </div>
 
 <?php $__env->stopSection(); ?>
