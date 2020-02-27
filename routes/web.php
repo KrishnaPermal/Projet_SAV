@@ -43,6 +43,10 @@ use Illuminate\Support\Facades\Route;
 
 
 
+Route::get('/', function(){
+    return view ('accueil');
+});
+
 
 Route::get('/clients', function () {
     $clients = App\ClientsModel::all();
@@ -53,17 +57,11 @@ Route::get('/clients', function () {
     ]); 
 });
 
-Route::get('/accueil', function(){
-    return view ('accueil');
-});
 
 Route::prefix('clients')->group(function () {
     Route::get('/{id}', 'ClientsController@show');
     Route::get('/{id}/historic', 'ExchangesControllers@show');
 });
-
-
-
 
 
 Route::prefix('exchange')->group(function () {

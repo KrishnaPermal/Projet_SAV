@@ -55,7 +55,7 @@ class ExchangesControllers extends Controller
             $validateData
         )->save();
         
-        return 'L\'ECHANGE A BIEN ÉTÉ AJOUTER À LA BASE DE DONNÉE S.A.V';
+        return view('clients.confirmation');
 
             
             

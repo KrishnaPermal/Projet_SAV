@@ -30,14 +30,15 @@
    
                         <?php $__currentLoopData = $clients; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $client): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         
-                        <div class="card m-4">        
+                        <div class="card border-info m-3">        
                            <div class="card-body m-1">
                               <div class="col-md-8">
-                                 <div class="card border-info mb-3" style="max-width: 18rem;">
+                                 <div class="card border-info mb-3" style="max-width: 30rem;">
                                     <div class="card-header">INFORMATION DU CLIENT</div>
                                     <div class="card-body text-info">
                                        ID : <?php echo e($client->id); ?> <br> Nom : <?php echo e($client->nom); ?> <br> Prenom : <?php echo e($client->prenom); ?> <br>
                                        <a href="/clients/<?php echo e($client->id); ?>"><button class="btn btn-outline-info">Voir plus d'informations</button></a>
+                                       <a href="/clients/<?php echo e($client->id); ?>/historic"><button class="btn btn-outline-info">Historique</button></a> 
                                     </div>
                                   </div> 
                               </div>
