@@ -85,8 +85,11 @@ class ExchangesControllers extends Controller
     {
       
         $exchanges = ExchangesModel::where('id_clients', "=", $id)->get();
-        return ($exchanges);
+        return 'totototo';
     }
 
+
+
+   
   
 }

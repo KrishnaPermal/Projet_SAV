@@ -20,7 +20,7 @@
    
    @extends('layouts.app')
    @section('content')
-      <h2 class="text-center">LISTES DES CLIENTS</h2>
+    
       <h3 class="text-center">Informations Supplémentaires</h3>
       <div class="content">
          <div class="class row justify-content-center">

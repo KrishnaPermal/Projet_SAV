@@ -67,5 +67,9 @@ Route::prefix('clients')->group(function () {
 Route::prefix('exchange')->group(function () {
     Route::get('/', 'ExchangesControllers@index');
     Route::post('/', 'ExchangesControllers@create');
-    Route::get('/{id}/historic', 'ExchangesControllers@show');
+    //Route::get('/{id}/historic', 'ExchangesControllers@show');
 });
+
+// Route::prefix('historique')->group(function () {
+//     Route::get('/', 'ExchangesControllers@show');
+// });
