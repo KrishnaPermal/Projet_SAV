@@ -85,7 +85,7 @@ class ExchangesControllers extends Controller
     {
       
         $exchanges = ExchangesModel::where('id_clients', "=", $id)->get();
-        return 'totototo';
+        return view('historique', ['exchanges' => $exchanges]);
     }
 
 
