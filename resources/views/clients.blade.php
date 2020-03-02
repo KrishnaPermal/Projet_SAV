@@ -23,18 +23,18 @@
       <br><br>
       <h3 class="text-center">LISTES DES CLIENTS</h3>
       <div class="content">
-         <div class="class row justify-content-center">
+         
+      <ul>  
+         <div class="row justify-content-center">
             <div class="col-md-8">
 
-                     <ul>
-   
-                        @foreach ($clients as $client)
+                  @foreach ($clients as $client)
                         {{-- {{ csrf_token() }} --}}
-                        <div class="card border-info m-3">        
+                        <div class="card border-info col-12 m-3">        
                            <div class="card-body m-1">
-                              <div class="col-md-8">
-                                 <div class="card border-info mb-3" style="max-width: 30rem;">
-                                    <div class="card-header">INFORMATION DU CLIENT</div>
+                              <div class="col-12">
+                                 <div class="card border-info col-12 mb-2">
+                                    <div class="card-header text-center">INFORMATION DU CLIENT</div>
                                     <div class="card-body text-info">
                                        ID : {{ $client->id }} <br> Nom : {{ $client->nom }} <br> Prenom : {{ $client->prenom }} <br>
                                        <a href="/clients/{{ $client->id }}"><button class="btn btn-outline-info">Voir plus d'informations</button></a>
@@ -44,15 +44,14 @@
                               </div>
                            </div>
                          </div>
-               
-                        @endforeach 
+                  @endforeach 
    @endsection              
             
-                     </ul>
+                  
             </div>
          </div>
       </div>
-
+   </ul>
    <!-- SCRIPT -->
    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

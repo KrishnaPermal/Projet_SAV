@@ -1,13 +1,3 @@
-{{-- @extends('layouts.app')
-@section('content')
-@foreach ($exchanges as $exchange)
-<p>
-    {{$exchange->commentaire}}
-</p>   
-@endforeach
-@endsection --}}
-
- 
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -31,39 +21,37 @@
    @extends('layouts.app')
    @section('content')
     
-      <h3 class="text-center">Echanges</h3>
+      <h3 class="text-center">Echanges</h3><br>
       <div class="content">
-         <div class="class row justify-content-center">
-            <div class="col-md-8">
+
+       <ul>  
+         <div class="row justify-content-center mr-5">
+            <div class="col-md-5">
                <div class="class card">
                   <div class="card-body">
-   
-                     <ul>
-                           <div class="card-body m-1">
-                              <div class="col-md-8">
-                                 <div class="card border-info mb-3" style="max-width: 18rem;">
-                                    <div class="card-header text-center">Historique</div>
-                                       <div class="card-body text-info">
+                                 
+                     <div class="d-flex justify-content-center">
+                        <div class="card border-info col-12 mb-5">
+                           <div class="card-header text-center">Historique</div>
+                              <div class="card-body text-info">
 
-                                              @foreach ($exchanges as $exchange)
-                                            <p>
-                                                Date : {{$exchange->date}}<br>
-                                                Type de contact : {{$exchange->id_exchange_types}}<br>
-                                                Opérateurs : {{$exchange->id_users}}<br>
-                                                Clients : {{$exchange->id_clients}}<br>
-                                                Commentaire : {{$exchange->commentaire}}
-                                            </p><hr>   
-                                             @endforeach
+                                 @foreach ($exchanges as $exchange)
+                                    <p>
+                                       Date : {{$exchange->date}}<br>
+                                       Type de contact : {{$exchange->id_exchange_types}}<br>
+                                       Opérateurs : {{$exchange->id_users}}<br>
+                                       Clients : {{$exchange->id_clients}}<br><hr>
+                                       Commentaire : {{$exchange->commentaire}}
+                                    </p><hr>   
+                                 @endforeach
 
-                                       </div>
-                                    </div> 
-                                 </div>
                               </div>
-                           </div>
-                     </ul>
-
+                           </div> 
+                        </div>
+                     </div>
                   </div>
                </div>
             </div>
          </div>
-         @endsection
+      </ul>
+   @endsection
