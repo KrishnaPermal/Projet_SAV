@@ -5,9 +5,9 @@
      <div class="col-md-5">
                   
                   <h1 class="text-center">ECHANGES</h1>
-                     <div class="card-body m-2">
-                        <div class="d-flex justify-content-center">
-                           <div class="card border-info mb-5" style="max-height:30rem">
+                    <div class="card-body m-2">
+                      <div class="d-flex justify-content-center">
+                        <div class="card border-info mb-5" style="">
                               <div class="card-body text-info">
 
                               
@@ -60,7 +60,7 @@
                               </div>
                                     <p class="text-center"><?php echo e($ajouter); ?></p>  
                             </div>
-                        </div>
+                      </div>
                     </div>
           
     </div>
