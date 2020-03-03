@@ -53,7 +53,7 @@
                                   </div>
 
 
-                                  <a href="/clients/{{ $client->id}}/historic"><button class="btn btn-outline-info">Ajout</button></a>
+                                  <a href="/clients/{{$client->id}}/historic"><button class="btn btn-outline-info">Ajout</button></a>
                                 
                               </form> 
                               
