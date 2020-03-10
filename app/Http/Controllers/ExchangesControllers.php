@@ -18,15 +18,13 @@ class ExchangesControllers extends Controller
      */
     public function index()
     {
-        //
-        $ajouter = "";
+        //les remonter avec les with
         $clients = ClientsModel::all();
         $exchange_types = ExchangesTypesModel::all();
-        $exchanges = ExchangesModel::all();
         $operateurs = User::all();
         return view('clients.exchange', [
-            'clients' => $clients, 'exchange_types' => $exchange_types, 'operateurs' => $operateurs, 'exchanges' => $exchanges, 'ajouter' => $ajouter        
-            ]); 
+            'clients' => $clients, 'exchange_types' => $exchange_types, 'operateurs' => $operateurs,
+        ]);
     }
 
     /**
@@ -37,43 +35,43 @@ class ExchangesControllers extends Controller
     public function create(Request $request)
     {
 
-        
-        $clients = ClientsModel::all();
-        $exchange_types = ExchangesTypesModel::all();
-        $exchanges = ExchangesModel::all();
-        $operateurs = User::all();
-        $validateData = Validator::make(  //verifie les informations vis-a-vis de la BDD
+        $validateData = Validator::make( //verifie les informations vis-a-vis de la BDD
             $request->all(),
             [
                 'commentaire' => 'required', //"required" -> ce champs est obligatoire
                 'date' => 'required',
-                'id_users' => 'required',
-                'id_clients' => 'required',
-                'id_exchange_types' => 'required',
+                'id_users' => 'required|integer',
+                'id_clients' => 'required|integer',
+                'id_exchange_types' => 'required|integer',
             ],
             [
                 'required' => 'Le champs :attribute est requis', // :attribute renvoie le champs / l'id de l'element en erreure
             ]
-        )->validate(); 
+        )->validate();
 
+
+        $clients = ClientsModel::all();
+        $exchange_types = ExchangesTypesModel::all();
+        $exchanges = ExchangesModel::all();
+        $operateurs = User::all();
+
+        
         $data = ExchangesModel::create(
             $validateData
         )->save();
-        
-        if($validateData){
+
+        if ($validateData) {
             $ajouter = "L'Échange à bien été ajouter dans la Base de donnée";
-        }
-        else {
+        } else {
             $ajouter = "";
         }
-        
-        return view('clients.exchange', [
-            'clients' => $clients, 'exchange_types' => $exchange_types, 'operateurs' => $operateurs, 'exchanges' => $exchanges, 'ajouter' => $ajouter,  
-                    
-                    ]);
- 
-    }
 
+        return view('clients.exchange', [
+            'clients' => $clients, 'exchange_types' => $exchange_types, 'operateurs' => $operateurs, 'exchanges' => $exchanges, 'ajouter' => $ajouter,
+
+        ]);
+
+    }
 
     /**
      * Display the specified resource.
@@ -81,15 +79,11 @@ class ExchangesControllers extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($idClient)
     {
-      
-        $exchanges = ExchangesModel::where('id_clients', "=", $id)->get();
+        $exchanges = ExchangesModel::with('client', 'exchangeType', 'user')->get();
         return view('historique', ['exchanges' => $exchanges]);
+
     }
 
-
-
-   
-  
 }

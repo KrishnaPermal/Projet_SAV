@@ -60,7 +60,7 @@ Route::get('/clients', function () {
 
 Route::prefix('clients')->group(function () {
     Route::get('/{id}', 'ClientsController@show');
-    Route::get('/{id}/historic', 'ExchangesControllers@show');
+    Route::get('/{idClient}/historique', 'ExchangesControllers@show');
 });
 
 

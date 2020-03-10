@@ -23,7 +23,7 @@
                                     <label for="exampleFormControlSelect1">Type de Contact</label>
                                     <select class="form-control" id="exampleFormControlSelect1" name="id_exchange_types">
                                     @foreach ($exchange_types as $exchange_type)
-                                      <option href="#">{{$exchange_type->id}}</option>
+                                      <option value='{{$exchange_type->id}}'>{{$exchange_type->type}}</option>
                                      @endforeach
                                   </select>
                                   </div><br>
@@ -32,7 +32,7 @@
                                     <label for="exampleFormControlSelect1">Operateurs</label>
                                     <select class="form-control" id="exampleFormControlSelect1" name="id_users">
                                     @foreach ($operateurs as $operateur)
-                                      <option href="#">{{$operateur->id}}</option>
+                                      <option value='{{$operateur->id}}'>{{$operateur->nom}}</option>
                                     @endforeach
                                   </select>
                                   </div><br>
@@ -41,7 +41,7 @@
                                     <label for="exampleFormControlSelect1">Clients</label>
                                     <select class="form-control" id="exampleFormControlSelect1" name="id_clients">
                                     @foreach ($clients as $client)
-                                      <option href="#">{{$client->id}}</option>
+                                      <option value='{{$client->id}}'>{{$client->nom}}</option>
                                     @endforeach
                                   </select>
                                   </div><br>
@@ -53,13 +53,14 @@
                                   </div>
 
 
-                                  <a href="/clients/{{$client->id}}/historic"><button class="btn btn-outline-info">Ajout</button></a>
+                                  <a href="/clients/{{$client->commentaire}}/historic"><button class="btn btn-outline-info">Ajout</button></a>
                                 
                               </form> 
-                              
+                              @if(isset($ajouter))
                               </div>
                                     <p class="text-center">{{$ajouter}}</p>  
                             </div>
+                            @endif
                       </div>
                     </div>
                   </div>

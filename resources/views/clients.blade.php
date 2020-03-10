@@ -38,7 +38,7 @@
                                     <div class="card-body text-info">
                                        ID : {{ $client->id }} <br> Nom : {{ $client->nom }} <br> Prenom : {{ $client->prenom }} <br>
                                        <a href="/clients/{{ $client->id }}"><button class="btn btn-outline-info">Voir plus d'informations</button></a>
-                                       <a href="/clients/{{ $client->id}}/historic"><button class="btn btn-outline-info">Historique</button></a> 
+                                       <a href="/clients/{{ $client->id}}/historique"><button class="btn btn-outline-info">Historique</button></a> 
                                     </div>
                                   </div> 
                               </div>

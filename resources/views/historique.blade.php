@@ -38,9 +38,9 @@
                                  @foreach ($exchanges as $exchange)
                                     <p>
                                        Date : {{$exchange->date}}<br>
-                                       Type de contact : {{$exchange->id_exchange_types}}<br>
-                                       Opérateurs : {{$exchange->id_users}}<br>
-                                       Clients : {{$exchange->id_clients}}<br><hr>
+                                       Type de contact : {{$exchange->exchangeType->type}}<br>
+                                       Opérateurs : {{$exchange->user->nom}}<br>
+                                       Clients : {{$exchange->client->nom}}<br><hr>
                                        Commentaire : {{$exchange->commentaire}}
                                     </p><hr>   
                                  @endforeach
@@ -55,3 +55,4 @@
          </div>
       </ul>
    @endsection
+

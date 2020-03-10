@@ -7,7 +7,7 @@
                   <h1 class="text-center">ECHANGES</h1>
                     <div class="card-body m-2">
                       <div class="d-flex justify-content-center">
-                        <div class="card border-info mb-5" style="">
+                        <div class="card border-info col-12 mb-5" style="">
                               <div class="card-body text-info">
 
                               
@@ -62,6 +62,7 @@
                             </div>
                       </div>
                     </div>
+                  </div>
           
     </div>
   </div>

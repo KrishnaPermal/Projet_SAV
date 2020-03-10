@@ -14,15 +14,14 @@ class ExchangesResource extends JsonResource
      */
     public function toArray($request)
     {
-     
-        //Formatage des données
-        
-        $types = new ExchangesTypesResource($this->whenLoaded('exchange'));
+
+        $types = new ExchangesTypesResource($this->whenLoaded($this->exchangeType));
+
         return [
             'id' => $this->id,
             'date' => $this->date,
             'commentaire' => $this->commentaire,
-            'exchange' => $types,
+            'type' => 'toto',
         ];
     }
 }
